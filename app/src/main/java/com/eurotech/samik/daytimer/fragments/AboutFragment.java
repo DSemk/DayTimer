@@ -23,8 +23,8 @@ public class AboutFragment extends Fragment {
         View view = inflater.inflate(R.layout.content_about,container,false);
 
         textView = (TextView)view.findViewById(R.id.ca_about);
-        String s = "Связатьса с разработчиком : gotoyougoal@gmail.com " +
-                "\n\n\n\n\nВерсия : " + VERSION;
+        String s = " Связатьса с разработчиком : gotoyougoal@gmail.com " +
+                "\n\n\n\n\n Версия : " + VERSION;
         textView.setText(s);
         return view;
     }

@@ -1,6 +1,12 @@
 package com.eurotech.samik.daytimer.engine;
 
+import android.content.SharedPreferences;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by samik on 26.11.2016.
@@ -8,8 +14,8 @@ import java.util.ArrayList;
 
 public class BaseData {
     private ArrayList<String[]> dayType;
-
-
+    private SharedPreferences sharedPreferences;
+    private  String strJson;
     public BaseData() {
     }
 
@@ -42,10 +48,23 @@ public class BaseData {
     }
 
     private void initDayList() {
-        //TODO
+       strJson = sharedPreferences.getString("jsondata","0");
+        if(!strJson.equals("0")) try {
+            JSONObject jsonData = new JSONObject(strJson);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public void saveDayList(){
         //TODO
+    }
+
+}
+class Day{
+    List<String[]> dayTask = new ArrayList<>();
+
+    public Day(List<String[]> dayTask) {
+        this.dayTask = dayTask;
     }
 }

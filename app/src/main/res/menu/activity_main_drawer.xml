@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_today"
+            android:icon="@drawable/ic_today_in_black_24dp"
+            android:title="Сегодня" />
+        <item
+            android:id="@+id/nav_statistic"
+            android:icon="@drawable/ic_statistic_poll_black_24dp"
+            android:title="Статистика" />
+    </group>
+
+    <item android:title="Прочее">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_about_black_24dp"
+                android:title="О приложении" />
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_close_black_24dp"
+                android:title="Выход" />
+        </menu>
+    </item>
+
+</menu>

@@ -8,7 +8,7 @@ import java.util.HashMap;
  */
 public class SingletonWorker {
 
-    private HashMap<String, HashMap<String, Integer>> daysList;
+    private ArrayList<String[]> daysList;
 
     private static SingletonWorker ourInstance = new SingletonWorker();
 
@@ -19,11 +19,11 @@ public class SingletonWorker {
     private SingletonWorker() {
     }
 
-    public HashMap<String, HashMap<String, Integer>> getDaysList() {
-        return daysList;
-    }
-
-    public void setDaysList(HashMap<String, HashMap<String, Integer>> daysList) {
-        this.daysList = daysList;
-    }
+//    public HashMap<String, HashMap<String, Integer>> getDaysList() {
+//        return daysList;
+//    }
+//
+//    public void setDaysList(HashMap<String, HashMap<String, Integer>> daysList) {
+//        this.daysList = daysList;
+//    }
 }

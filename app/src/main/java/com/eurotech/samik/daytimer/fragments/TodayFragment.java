@@ -36,8 +36,9 @@ public class TodayFragment extends android.app.Fragment {
     private RelativeLayout relativeLayout;
 
     private PieChart mChart;
-    private float[] yData = {2, 7, 8, 4, 3};
-    private String[] xData = {"Питание", "Сон", "Работа", "Отдых", "Личные дела"};
+    private float[] yData = {2, 7, 8, 4, 3, 4, 2, 10, 2, 3, 5};
+    private String[] xData = {"Питание", "Сон", "Работа", "Отдых", "Личные дела"
+    ,"Игры","Телик","Общение с друзьями","Спорт","Прогулки","Прочее"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class TodayFragment extends android.app.Fragment {
 
         return view;
     }
+
     private void addData() {
         ArrayList<Entry> yVals = new ArrayList<Entry>();
 
@@ -61,7 +63,7 @@ public class TodayFragment extends android.app.Fragment {
             xVals.add(xData[i]);
         }
 
-        PieDataSet dataSet = new PieDataSet(yVals, "Сегодня");
+        PieDataSet dataSet = new PieDataSet(yVals, "");
         dataSet.setSliceSpace(3);
         dataSet.setSelectionShift(5);
 
@@ -92,6 +94,7 @@ public class TodayFragment extends android.app.Fragment {
 
         mChart.invalidate();
     }
+
     private void initGraph() {
 
         mChart = new PieChart(view.getContext());
@@ -134,9 +137,8 @@ public class TodayFragment extends android.app.Fragment {
         legend.setYEntrySpace(5);
     }
 
-    private void initView(){
-        addTask = (Button)view.findViewById(R.id.tf_add_task);
-        tempTime = (TextView)view.findViewById(R.id.tf_status);
-        relativeLayout = (RelativeLayout)view.findViewById(R.id.graph_layout);
+    private void initView() {
+        tempTime = (TextView) view.findViewById(R.id.tf_status);
+        relativeLayout = (RelativeLayout) view.findViewById(R.id.graph_layout);
     }
 }

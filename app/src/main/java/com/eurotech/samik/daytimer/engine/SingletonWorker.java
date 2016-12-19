@@ -19,11 +19,4 @@ public class SingletonWorker {
     private SingletonWorker() {
     }
 
-//    public HashMap<String, HashMap<String, Integer>> getDaysList() {
-//        return daysList;
-//    }
-//
-//    public void setDaysList(HashMap<String, HashMap<String, Integer>> daysList) {
-//        this.daysList = daysList;
-//    }
 }
